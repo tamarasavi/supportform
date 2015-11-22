@@ -1,0 +1,39 @@
+
+.imgcenter {
+  text-align: center; 
+}
+
+body {
+  background: url('bg1.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.boxshadow {
+  -webkit-box-shadow: 0px 0px 75px 8px rgba(97,97,97,1);
+  -moz-box-shadow: 0px 0px 75px 8px rgba(97,97,97,1);
+  box-shadow: 0px 0px 75px 8px rgba(97,97,97,1); 
+  border-radius: 15px 15px 15px 15px;
+ -moz-border-radius: 15px 15px 15px 15px;
+-webkit-border-radius: 15px 15px 15px 15px;
+border: 0px solid #000000;
+padding-left:40px;
+padding-right:40px;
+background: #E5E5E5;
+}
+
+textarea {
+    
+    width: 100%;
+    max-width:350px;
+    height: 100px;
+}
+
+.center {
+  text-align: center;
+  display: inline-block;
+  float:right;
+
+}
+

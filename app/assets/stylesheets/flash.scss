@@ -1,0 +1,21 @@
+.flash{
+  font-size: 19px;
+  color: white;
+  z-index: 110000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  .wrapper{
+    padding: 20px;
+  }
+  .alerts-success.wrapper, .notice.wrapper{
+    background-color: green;
+  }
+  .alerts-failure.wrapper, .error.wrapper, .alerts-error.wrapper{
+    background-color: red;
+  }
+  .alerts-info.wrapper{
+    background-color: blue;
+  }
+}

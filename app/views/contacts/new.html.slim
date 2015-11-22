@@ -1,0 +1,60 @@
+/ contact form
+
+.container-full
+ .row
+  .col-md-12.imgcenter
+
+      = image_tag 'logo.png', alt: 'Inbank Tech', width: 570
+
+
+.container-fluid
+  .row
+    .col-md-4.col-md-offset-4.boxshadow
+
+      .contact-form
+        h2.text-center Klienditugi
+        = simple_form_for @contact do |f|
+
+          
+          .form-group
+            = f.input :name, label: 'Nimi:', required: true, input_html: { class: "form-control" }, placeholder: 'Teie Ees- ja Perekonnanimi'
+
+
+          .form-group
+            = f.input :email, label: 'E-posti aadress:', required: true, input_html: { class: "form-control" }, placeholder: 'Teie e-posti aadress: email@post.ee'
+
+
+          .form-group
+            = f.input :subject, label: 'Pealkiri:', required: true, input_html: { class: "form-control" }, placeholder: 'Probleemi lühikirjeldus'
+
+
+          .form-group
+            = f.input :deadline, label: 'Tähtaeg:', required: true, input_html: { class: "form-control" }, placeholder: 'Palun märkige päringu tähtaeg' 
+
+          
+          .form-group
+             = f.label :attach_file, 'Lisage fail:'
+             = f.file_field(:attach_file, class: "form-control", required: false)
+
+
+
+          = f.label :message, 'Kirja tekst:'
+          .form-group
+            = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi: - Millal viga tekkis (näiteks, kas on teada, millal viimati protsess töötas korrektselt); - Mis süsteemis on viga tekkinud (kuna meie klienditugi tegeleb erinevate süsteemidega ja mõnikord on kontakteerija nime järgi keeruline aru saada, mis süsteemis viga esines); - Kuidas probleem avastati (kas lõppkasutaja pöördus teie poole või tuli veateavitus); - Mis kasutajaga viga ilmnes (kasutajanimi, id kood, kasutaja ID); -Kus probleem tekkis (täpsem koht süsteemis, kus probleemi avastati; võimalusel ka link antud kohale); - Kuidas veakohani jõuti - kirjeldada võimalikult täpselt, mida tehti ja mis hetkel süsteem andis veateate; Kui on teada tavapärane  protsessi tulemus, siis ka see lisada; - Kui problem esines lõppkasutajal (kliendil), oleks hea teada, mis veebibrauseris klient proovis antud protsessi teha ning kas klient proovis ka teisi veebibrausereid; hea on, kui on olemas ka ekraanitõmmis tekkinud probleemist.'
+          
+
+          .form-group.center
+            = f.button :submit, 'Saada', class: 'btn btn-default btn-lg active'
+
+
+
+.container-full
+ .row
+  .col-md-12.imgcenter
+
+     h5.text-center © 2015 Inbank Technologies. Kõik õigused kaitsud.
+     = image_tag 'logo.png', width: 80
+
+      
+
+

@@ -45,3 +45,14 @@ group :development do
   gem 'spring'
 end
 
+gem 'simple_form'
+gem 'mail_form'
+
+gem 'slim-rails'
+gem 'bootstrap-sass'
+
+group :development, :test do
+    gem 'foreman'
+end
+
+gem 'pg'
