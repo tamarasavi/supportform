@@ -32,7 +32,7 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
- database: inbankform_development
+  database: inbankform_development
   pool: 5
   username:
   password:
@@ -46,7 +46,7 @@ test:
   username:
   password:
 
- production:
- adapter: postgresql
+production:
+  adapter: postgresql
   encoding: unicode
   database: reviseme_production
