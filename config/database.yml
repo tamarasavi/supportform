@@ -28,25 +28,25 @@
 
 
 
-development:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: inbankform_development
-  pool: 5
-  username:
-  password:
-
-test:
-  adapter: postgresql
-  encoding: unicode
-  host: localhost
-  database: inbankform_test
-  pool: 5
-  username:
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: reviseme_production
+# development:
+  #adapter: postgresql
+  #encoding: unicode
+  #host: localhost
+  #database: inbankform_development
+  #pool: 5
+  #username:
+  #password:
+#
+#test:
+ #adapter: postgresql
+ #encoding: unicode
+ #host: localhost
+ #database: inbankform_test
+ #pool: 5
+ #username:
+ #password:
+#
+#production:
+ #adapter: postgresql
+ #encoding: unicode
+ #database: reviseme_production
