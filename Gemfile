@@ -55,7 +55,7 @@ group :development, :test do
     gem 'foreman'
 end
 
-gem 'pg'
+#gem 'pg'
 
 gem 'rails_12factor'
 
