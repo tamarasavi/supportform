@@ -4,7 +4,7 @@ class Contact < MailForm::Base
   attribute :subject,    :validate => true
   attribute :deadline,   :validate => true
   attribute :message
-  attribute :attach_file
+  attribute :attach_file, :attachment => true
 
   def headers
     {

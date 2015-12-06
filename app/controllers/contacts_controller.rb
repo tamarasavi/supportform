@@ -8,10 +8,10 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       redirect_to root_url
-      flash[:notice] = 'Thank you for your message. We will contact you soon! Täname teie kirja eest. Vastame esimesel võimalusel!'
+      flash[:notice] = 'Teie kiri oli saadetud Inbank Tech IT klienditoele. Teie e-posti aadreesile varsti tuleb kiri koos teie päringu numbriga. Vastame teile vastavalt märgitud priorideedile.'
     else
       redirect_to root_url
-      flash[:error] = 'Cannot send message. Please try again. Kiri ei olnud saadetud. Palun proovige veel kord.'
+      flash[:error] = 'Kiri ei olnud saadetud. Palun proovige veel kord.'
     end
   end
 end

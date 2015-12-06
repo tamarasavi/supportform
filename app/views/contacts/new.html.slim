@@ -13,7 +13,7 @@
 
       .contact-form
         h2.text-center Klienditugi
-        = simple_form_for @contact do |f|
+        = simple_form_for @contact, :multipart=>true do |f|
 
           
           .form-group
@@ -40,7 +40,7 @@
 
           = f.label :message, 'Kirja tekst:'
           .form-group
-            = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi: - Millal viga tekkis (näiteks, kas on teada, millal viimati protsess töötas korrektselt); - Mis süsteemis on viga tekkinud (kuna meie klienditugi tegeleb erinevate süsteemidega ja mõnikord on kontakteerija nime järgi keeruline aru saada, mis süsteemis viga esines); - Kuidas probleem avastati (kas lõppkasutaja pöördus teie poole või tuli veateavitus); - Mis kasutajaga viga ilmnes (kasutajanimi, id kood, kasutaja ID); -Kus probleem tekkis (täpsem koht süsteemis, kus probleemi avastati; võimalusel ka link antud kohale); - Kuidas veakohani jõuti - kirjeldada võimalikult täpselt, mida tehti ja mis hetkel süsteem andis veateate; Kui on teada tavapärane  protsessi tulemus, siis ka see lisada; - Kui problem esines lõppkasutajal (kliendil), oleks hea teada, mis veebibrauseris klient proovis antud protsessi teha ning kas klient proovis ka teisi veebibrausereid; hea on, kui on olemas ka ekraanitõmmis tekkinud probleemist.'
+            = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi'
           
 
           .form-group.center
