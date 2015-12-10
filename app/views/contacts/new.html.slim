@@ -31,17 +31,21 @@
           .form-group
             = f.input :deadline, label: 'Tähtaeg:', required: true, input_html: { class: "form-control" }, placeholder: 'Palun märkige päringu tähtaeg' 
 
-          
           .form-group
-             = f.label :attach_file, 'Lisage fail:'
-             = f.file_field(:attach_file, class: "form-control", required: false)
+            = f.input :system, label: 'Süsteem:', required: true, input_html: { class: "form-control" }, placeholder: 'Märkige süsteem kus viga tekkis. Näiteks, Allkiri...'
 
+          .form-group
+            = f.input :info, label: 'Täiendav info:', required: true, input_html: { class: "form-control" }, placeholder: 'Näiteks, kliendi isikukood/nimi, lepingu number...'
 
 
           = f.label :message, 'Kirja tekst:'
           .form-group
-            = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi'
+            = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi nii detailselt kui võimalik.'
           
+          .form-group
+             = f.label :attach_file, 'Faili lisamiseks:'
+             = f.file_field(:attach_file, class: "form-control", required: false)
+
 
           .form-group.center
             = f.button :submit, 'Saada', class: 'btn btn-default btn-lg active'
