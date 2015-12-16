@@ -1,35 +1,38 @@
 / contact form
 
-.container-full
+ .container-full
  .row
   .col-md-12.imgcenter
-
-      = image_tag 'inbank.png', alt: 'Inbank Tech', width: 570
-
+ 
 
 .container-fluid
   .row
     .col-md-4.col-md-offset-4.boxshadow
+      
 
       .contact-form
-        h2.text-center Klienditugi
-        = simple_form_for @contact, :multipart=>true do |f|
 
-          
+         
+         div
+         .logo-center
+         = image_tag("logosmall.png", width: 50, class: "img-valign") 
+         span.text1 Klienditugi
+         / h2.text-center Klienditugi
+         = simple_form_for @contact, :multipart=>true do |f|
+
           .form-group
             = f.input :name, label: 'Nimi:', required: true, input_html: { class: "form-control" }, placeholder: 'Teie Ees- ja Perekonnanimi'
 
 
           .form-group
             = f.input :email, label: 'E-posti aadress:', required: true, input_html: { class: "form-control" }, placeholder: 'Teie e-posti aadress: email@post.ee'
-
+           
+            .form-group
+            = f.input :telefon, label: 'Muu kontakt info:', required: false, input_html: { class: "form-control" }, placeholder: 'Näiteks, telefoni number või Skype' 
 
           .form-group
             = f.input :subject, label: 'Pealkiri:', required: true, input_html: { class: "form-control" }, placeholder: 'Probleemi lühikirjeldus'
 
-
-          .form-group
-            = f.input :deadline, label: 'Tähtaeg:', required: true, input_html: { class: "form-control" }, placeholder: 'Palun märkige päringu tähtaeg' 
 
           .form-group
             = f.input :system, label: 'Süsteem:', required: true, input_html: { class: "form-control" }, placeholder: 'Märkige süsteem kus viga tekkis. Näiteks, Allkiri...'
@@ -38,7 +41,7 @@
             = f.input :info, label: 'Täiendav info:', required: true, input_html: { class: "form-control" }, placeholder: 'Näiteks, kliendi isikukood/nimi, lepingu number...'
 
 
-          = f.label :message, 'Kirja tekst:'
+          = f.label :message, 'Probleemi kirjeldus:'
           .form-group
             = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi nii detailselt kui võimalik.'
           
@@ -58,6 +61,8 @@
 
      h5.text-center © 2015 Inbank Technologies. Kõik õigused on kaitstud.
      = image_tag 'logo.png', width: 80
+
+ 
 
       
 
