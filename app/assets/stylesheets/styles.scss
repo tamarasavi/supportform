@@ -6,6 +6,7 @@
 body {
   background-position: center;
   background-attachment: fixed;
+  margin-top: 20px;
 }
 
 .boxshadow { 
@@ -41,13 +42,67 @@ textarea {
 
 .text1 {
   padding-left: 10px;
-  font-size: 35px;
+  font-size: 32px;
   text-align: center;
 }
 
 .logo-center{
   margin: 0 auto;
-  width: 300px;
+  width: 215px;
 }
 
- 
+ .black_overlay{
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  z-index:1001;
+  -moz-opacity: 0.8;
+  opacity:.80;
+  filter: alpha(opacity=80);
+}
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 60%;
+  height: 70%;
+  background-color: white;
+  z-index:1002;
+  overflow: auto;
+    -webkit-box-shadow: 0px 0px 20px 4px #999999;
+    -moz-box-shadow: 0px 0px 20px 5px #999999;
+    box-shadow: 0px 0px 20px 4px #999999;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 0px solid #000000;
+    padding: 40px;
+}
+
+.close {
+  position:absolute;
+  z-index:99999999;
+  top:10px;
+  right:10px;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 1;
+}
+
+p {
+  font-size: 14px;
+}
+
+.textcolor {
+  color: #6D7CB5;
+}

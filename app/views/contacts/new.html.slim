@@ -1,6 +1,6 @@
 / contact form
 
- .container-full
+ .container-fluid
  .row
   .col-md-12.imgcenter
  
@@ -8,16 +8,17 @@
 .container-fluid
   .row
     .col-md-4.col-md-offset-4.boxshadow
-      
 
       .contact-form
 
-         
-         div
          .logo-center
-         = image_tag("logosmall.png", width: 50, class: "img-valign") 
-         span.text1 Klienditugi
-         / h2.text-center Klienditugi
+          = image_tag("logosmall.png", width: 50, class: "img-valign") 
+          span.text1 Klienditugi
+         p
+          | 
+          a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document
+          getElementById('fade').style.display='block'"  Raporteerimise juhend  
+
          = simple_form_for @contact, :multipart=>true do |f|
 
           .form-group
@@ -46,7 +47,7 @@
             = f.text_area :message, required: false, input_html: { class: "form-control"}, placeholder: 'Palun kirjeldage probleemi nii detailselt kui võimalik.'
           
           .form-group
-             = f.label :attach_file, 'Faili lisamiseks:'
+             = f.label :attach_file, 'Laadi fail:'
              = f.file_field(:attach_file, class: "form-control", required: false)
 
 
